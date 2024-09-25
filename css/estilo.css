@@ -1,16 +1,22 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: content-box;
     
    
 }
 
 
 header{
-    height: 80px;
+    padding-top: 0;
     background: linear-gradient(to bottom, rgb(174, 175, 194), rgb(225, 196, 243));
+    height: 100%;
     
 }
+ header img{
+    height: auto;
+    width: 250px
+ }
 
 .navbar-nav{
     display: flex;
@@ -43,28 +49,26 @@ li{
 
 h1{
     color: rgb(118, 79, 124);
-    font-size: 100px;
+    font-size: 20px;
     font-family: '"Dancing Script"';
     font-weight: 300px;
 
 }
 
-#h1header{
-    color: rgb(248, 241, 241);
-    font-size: 100px;
-    font-family: '"Dancing Script"';
-    font-weight: 100px;
 
-}
 
 h2{
-    font-size:30px;
+    font-size:50px;
     font-family: "Ubuntu";
     text-align: center;
     
 }
 
+h3{
+    font-size:30px;
+    font-family: "Ubuntu";
 
+}
 
 
 .divHome{
@@ -74,6 +78,9 @@ h2{
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+
     
 }
 
@@ -89,18 +96,19 @@ p{
     
 }
 
-/* pise la clase del carousel de boostrap(no se si es lo correcto)- */
 
-#carouselExampleRide{
+.carousel{
     display: grid;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     width: 100%;
     justify-content: center;
-    grid-gap: 10px;
+    gap: 10px;
+  
     
 }
 
+/* pise la clase del carousel de boostrap(no se si es lo correcto)- */
 
 
 .carousel-item img{
@@ -140,13 +148,10 @@ p{
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 400px;
-    
+    height: 100%;
+   
 }
 
-
-
-}
 
 @media only screen and (min-width:1200px){
     
@@ -176,18 +181,41 @@ p{
 .divHome{
     display: grid;
     justify-content: start;
-    height: 600px;
-    
+    height: 300px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "texto1 texto2 texto2"
+        "texto1 texto2 texto2"
+        "texto3 texto3 texto3";
+    align-items: center;
+
+       
     
 }
 
-.divHome h2{   
+.divHome h2{  
     font-size:30px;
     font-family: "Ubuntu";
-    text-align: center;
+    grid-area: texto1;
+    align-self:auto;
+    
     
             
 }
+.divHome h3{  
+    font-size:30px;
+    font-family: "Ubuntu";
+    grid-area: texto2;
+    align-self:last baseline
+    
+
+   
+            
+}
+
+
+
 
 .divHome p{
     text-align: center;
@@ -196,6 +224,7 @@ p{
     font-size: 19px;
     text-align: center;
     height: 30px;
+    grid-area: texto3;
 
 }
 
@@ -203,7 +232,7 @@ p{
 
 }
 
-/* Pie de mi pagina*/
+/* footer*/
 
 
 
@@ -219,6 +248,8 @@ p{
 
 }
 
+
+
 .redes-sociales {
     display: flex;
     gap: 20px;
@@ -227,14 +258,11 @@ p{
 }
 
 .enlace-red {
-    color: #6e4777;
+    color: #36113f;
     text-decoration: none;
     font-size: 18px;
     
 }
 
-/* Cambio de color al pasar el ratón */
 
-.enlace-red:hover {
-    color: #ca51da; 
-}
+
