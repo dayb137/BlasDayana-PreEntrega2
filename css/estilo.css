@@ -55,9 +55,10 @@ li{
 h1{
     color: rgb(118, 79, 124);
     font-size: 50px;
-    font-family: '"ubuntu"';
+    font-family: "Dancing+Script";
     text-align: center;
     font-weight: 300px;
+    text-shadow: 2px 2px 4px #888;
 
 }
 
@@ -202,7 +203,7 @@ h3{
 }
 
 
-/* media pantalla pc*/
+/* media escritrio*/
 
 @media only screen and (min-width:1200px){
     
@@ -249,8 +250,20 @@ h3{
     justify-content: center;
     max-width:100%;
     max-width: 100%;
+    border-radius: 10% ;
     
 }
+.carousel-item{
+    max-width: 100%;
+    max-width: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    
+}
+
+}
+/*fin media escritorio*/
+
 /* estilo contacto escritorio*/
 .contacto{
     display: grid;
@@ -264,14 +277,14 @@ h3{
     " mapa mapa mapa mapa "
     "titulo2 titulo2 titulo2 titulo2 "
     "texto0 texto0 texto0 texto0";
-       
-       
-       
-    }
     
+    
+    
+}
+
 .contacto h2{
-     grid-area:titulo1;
- }
+    grid-area:titulo1;
+}
 .contacto h3{
     grid-area:titulo2;
 }
@@ -301,7 +314,34 @@ h3{
     
 }
 
+
+
+/*estilo servicios*/
+
+.servicios{
+    background-color: #ead9ee;
+    border: 3px solid #380d59;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+ 
+.servis{
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    flex-wrap: wrap;
+
+}
+.servis img{
+    height: 300px;
+    width: 0 auto;
+}
+
+  
+
 /* estilo contacto*/
 
 .contacto{
@@ -322,6 +362,9 @@ h3{
     
 }
 
+
+/* footer*/
+
 .pie-pagina {
     background: linear-gradient(to bottom, rgb(174, 175, 194), rgb(225, 196, 243)); 
     padding: 40px 20px;
@@ -333,9 +376,6 @@ h3{
     height: auto;
     
 }
-
-/* footer*/
-
 
 .redes-sociales {
     display: flex;
