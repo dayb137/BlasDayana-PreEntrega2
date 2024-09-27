@@ -3,7 +3,7 @@
     padding:0;
     box-sizing:border-box;
     
-   
+    
 }
 
 
@@ -14,12 +14,12 @@ header{
     height: 100%;
     
 }
- header img{
+header img{
     height: auto;
     width: 250px
- }
+}
 
- /*estilo barra nav*/
+/*estilo barra nav*/
 
 .navbar-nav{
     display: flex;
@@ -46,7 +46,7 @@ ul{
 li{
     display: inline-block;
     margin: 10px;
-
+    
 }
 
 
@@ -59,7 +59,7 @@ h1{
     text-align: center;
     font-weight: 300px;
     text-shadow: 2px 2px 4px #888;
-
+    
 }
 
 
@@ -74,7 +74,7 @@ h2{
 h3{
     font-size:30px;
     font-family: "Ubuntu";
-
+    
 }
 
 /*intro pagina*/
@@ -88,7 +88,7 @@ h3{
     flex-wrap: wrap;
     margin: 10px;
     padding: 10px;
-
+    
     
 }
 .divHome h2{  
@@ -98,7 +98,7 @@ h3{
     align-self:auto;
     
     
-            
+    
 }
 .divHome h3{  
     font-size:30px;
@@ -106,9 +106,9 @@ h3{
     grid-area: texto2;
     align-self:last baseline
     
-
-   
-            
+    
+    
+    
 }
 
 .divHome p{
@@ -119,7 +119,7 @@ h3{
     text-align: center;
     height: 30px;
     grid-area: texto3;
-
+    
 }
 
 
@@ -127,13 +127,12 @@ h3{
 
 
 .carousel{
+    height: 200px;
+    width: 100%;
     display: grid;
     margin: 10px;
     padding: 10px;
-    width: 100%;
     justify-content: center;
-    
-  
     
 }
 
@@ -141,16 +140,72 @@ h3{
 
 
 .carousel-item img{
+    max-width: 600px;
     max-width: 100%;
-    max-width: auto;
     object-fit: cover;
     margin: 0 auto;
     
 }
+/* estilo contacto*/
 
+.contacto{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    
+    
+}
+
+.contacto h2{
+    height: 100px;
+    font-size:40px;
+    font-family: "Ubuntu";
+    grid-area: titulo1;
+}
+
+.contacto h3{
+    height: 20px;
+    grid-area: titulo2;
+}
+#direccion{
+    height: 20px;
+    grid-area: texto;
+}
+#cel-mail{
+    height: 20px;
+    width: 100%;
+    grid-area:texto0;
+}
+.contacto p{
+    font-size: 20px;
+    font-family: "ubuntu";
+    text-align: center;
+    
+}
+
+.g-map iframe {
+    display: block;
+    width: 90%;
+    height: 450px;
+    border: 1px solid #6f4e78;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+.g-map{
+    background-color: #705790;
+    padding: 25px;
+    
+    
+}
 /*media mobil*/
 
-@media only screen and (min-width:480px){
+@media (min-width:480px){
     
     header{
         
@@ -197,15 +252,15 @@ h3{
     justify-content: center;
     max-width: 100%;
     max-height: 100%;
-        
+    
 }
 
 }
-
+/* fin media mobile*/
 
 /* media escritrio*/
 
-@media only screen and (min-width:1200px){
+@media (min-width:1200px){
     
     header{
         
@@ -248,72 +303,37 @@ h3{
 .carousel{
     display: flex;
     justify-content: center;
-    max-width:100%;
+    max-width: 600px;
     max-width: 100%;
-    border-radius: 10% ;
+   
     
 }
-.carousel-item{
-    max-width: 100%;
-    max-width: auto;
-    object-fit: cover;
-    margin: 0 auto;
     
-}
 
-}
-/*fin media escritorio*/
+
 
 /* estilo contacto escritorio*/
 .contacto{
     display: grid;
-    justify-content: center;
-    height: 300px;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: auto;
+    height: 800px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "titulo1 titulo1 titulo1 titulo1   "
-    "texto texto texto texto "
-    " mapa mapa mapa mapa "
-    "titulo2 titulo2 titulo2 titulo2 "
-    "texto0 texto0 texto0 texto0";
+    "titulo1 mapa mapa"
+    "texto mapa mapa"
+    "texto mapa mapa"
+    "titulo2 mapa mapa"
+    "texto0 mapa mapa ";
     
     
     
-}
-
-.contacto h2{
-    grid-area:titulo1;
-}
-.contacto h3{
-    grid-area:titulo2;
-}
-#direccion{
-    grid-area: texto;
-}
-#cel-mail{
-    grid-area: texto0;
-}
-
-
-.g-map iframe {
-    display: block;
-    width: 90%;
-    height: 450px;
-    border: 1px solid #6f4e78;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    grid-area: mapa;
     
 }
 
-.g-map{
-    background-color: #705790;
-    padding: 25px;
-    grid-area: mapa;
-    
 }
 
+/*fin media escritorio*/
 
 
 /*estilo servicios*/
@@ -326,41 +346,22 @@ h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
- 
+
 .servis{
     border: 1px solid black;
     padding: 20px;
     max-width: 100%;
     max-height: 100%;
     flex-wrap: wrap;
-
+    
 }
 .servis img{
     height: 300px;
     width: 0 auto;
 }
 
-  
 
-/* estilo contacto*/
 
-.contacto{
-    display: grid;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-   
-    
-}
-
-.contacto p{
-    font-size: 20px;
-    font-family: "ubuntu";
-    text-align: center;
-    
-}
 
 
 /* footer*/
